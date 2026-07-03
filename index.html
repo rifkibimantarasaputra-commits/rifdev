@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html class="light" lang="id" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>RifDev - Jasa Pembuatan Website Profesional dari Indramayu</title>
+  <meta name="description" content="RifDev adalah web agency asal Indramayu yang siap membantu bisnis, UMKM, instansi, dan personal di seluruh Indonesia untuk go-digital. Konsultasi gratis via WhatsApp!">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary": "#ffffff",
+            "inverse-surface": "#2d3133",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed-variant": "#004b74",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#e2e2e2",
+            "secondary-container": "#dfe0e0",
+            "surface-container": "#eceef0",
+            "outline-variant": "#c3c7cb",
+            "inverse-on-surface": "#eff1f3",
+            "on-primary-fixed-variant": "#3b4951",
+            "error": "#ba1a1a",
+            "tertiary": "#006398",
+            "inverse-primary": "#bac9d3",
+            "surface-variant": "#e0e3e5",
+            "on-surface-variant": "#43474a",
+            "on-secondary-container": "#616363",
+            "surface-tint": "#526069",
+            "on-primary-fixed": "#0f1d25",
+            "surface-dim": "#d8dadc",
+            "on-secondary-fixed-variant": "#454747",
+            "on-secondary-fixed": "#1a1c1c",
+            "surface-container-high": "#e6e8ea",
+            "primary-container": "#e3f2fd",
+            "surface-container-highest": "#e0e3e5",
+            "tertiary-fixed-dim": "#94ccff",
+            "primary": "#526069",
+            "error-container": "#ffdad6",
+            "on-surface": "#191c1e",
+            "tertiary-fixed": "#cde5ff",
+            "on-tertiary-container": "#0072ae",
+            "on-background": "#191c1e",
+            "background": "#f7f9fb",
+            "on-primary-container": "#606f78",
+            "primary-fixed": "#d6e5ef",
+            "secondary-fixed-dim": "#c6c6c7",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "on-error-container": "#93000a",
+            "outline": "#73787b",
+            "tertiary-container": "#e6f1ff",
+            "primary-fixed-dim": "#bac9d3",
+            "surface": "#f7f9fb",
+            "secondary": "#5d5f5f",
+            "on-tertiary-fixed": "#001d32",
+            "surface-bright": "#f7f9fb"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "section-gap": "120px",
+            "container-max": "1280px",
+            "margin-mobile": "20px",
+            "unit": "8px"
+          },
+          fontFamily: {
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "sans": ["Plus Jakarta Sans", "system-ui", "sans-serif"]
+          },
+          fontSize: {
+            "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "label-sm": ["13px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0.01em", fontWeight: "400" }],
+            "display-lg-mobile": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "1.7", letterSpacing: "0.01em", fontWeight: "400" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F8FAFC;
+      color: #191c1e;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .ambient-shadow-1 { box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04); }
+    .ambient-shadow-2 { box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08); }
+    .glass-overlay {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .material-symbols-outlined {
+      font-size: inherit;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .details-arrow { transform: rotate(180deg); }
+    
+    @keyframes sweep {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .glint {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+    }
+    .glint::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.9) 50%, transparent 80%);
+      transform: translateX(-100%);
+      animation: sweep 4s infinite;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .reveal-up.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-100 { transition-delay: 100ms; }
+    .reveal-delay-200 { transition-delay: 200ms; }
+    .reveal-delay-300 { transition-delay: 300ms; }
+    .reveal-delay-400 { transition-delay: 400ms; }
+  </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+
+  <!-- Top Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-overlay border-b border-outline-variant/20 transition-all duration-300">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 flex justify-between items-center w-full gap-4">
+      <a href="#hero" class="flex items-center shrink-0 group -space-x-2 md:-space-x-3">
+        <img src="img/logo.png" alt="RifDev Logo" class="h-8 md:h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
+        <span class="font-display-lg text-headline-md tracking-tighter text-primary font-bold">RifDev</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-6 lg:gap-10">
+        <a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300 font-medium whitespace-nowrap" href="#solusi">Solusi</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300 font-medium whitespace-nowrap" href="#layanan">Layanan</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300 font-medium whitespace-nowrap" href="#portofolio">Portofolio</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 duration-300 font-medium whitespace-nowrap" href="#proses">Proses</a>
+      </div>
+      
+      <button class="md:hidden text-primary p-2 shrink-0 ml-auto" id="mobile-menu-btn">
+        <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-xl shadow-2xl border-t border-outline-variant/20 overflow-hidden transition-all duration-300 max-h-0 opacity-0 rounded-b-3xl">
+      <div class="px-margin-mobile py-6 flex flex-col gap-2">
+        <a href="#solusi" class="mobile-link flex items-center gap-4 text-on-surface hover:text-primary py-3 px-5 rounded-2xl hover:bg-tertiary/10 transition-all font-semibold text-base">
+          <div class="bg-tertiary/10 text-tertiary p-2 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">lightbulb</span></div>
+          Solusi
+        </a>
+        <a href="#layanan" class="mobile-link flex items-center gap-4 text-on-surface hover:text-primary py-3 px-5 rounded-2xl hover:bg-tertiary/10 transition-all font-semibold text-base">
+          <div class="bg-tertiary/10 text-tertiary p-2 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">design_services</span></div>
+          Layanan
+        </a>
+        <a href="#portofolio" class="mobile-link flex items-center gap-4 text-on-surface hover:text-primary py-3 px-5 rounded-2xl hover:bg-tertiary/10 transition-all font-semibold text-base">
+          <div class="bg-tertiary/10 text-tertiary p-2 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">gallery_thumbnail</span></div>
+          Portofolio
+        </a>
+        <a href="#proses" class="mobile-link flex items-center gap-4 text-on-surface hover:text-primary py-3 px-5 rounded-2xl hover:bg-tertiary/10 transition-all font-semibold text-base">
+          <div class="bg-tertiary/10 text-tertiary p-2 rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">account_tree</span></div>
+          Proses
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      const links = document.querySelectorAll('.mobile-link');
+      
+      let isOpen = false;
+      
+      const toggleMenu = () => {
+        isOpen = !isOpen;
+        if(isOpen) {
+          menu.classList.remove('max-h-0', 'opacity-0');
+          menu.classList.add('max-h-96', 'opacity-100');
+          icon.textContent = 'close';
+        } else {
+          menu.classList.add('max-h-0', 'opacity-0');
+          menu.classList.remove('max-h-96', 'opacity-100');
+          icon.textContent = 'menu';
+        }
+      };
+
+      btn.addEventListener('click', toggleMenu);
+      links.forEach(link => link.addEventListener('click', () => {
+        if(isOpen) toggleMenu();
+      }));
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-32 pb-20 relative bg-white overflow-hidden w-full">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10">
+      
+      <!-- IMAGE (Left) -->
+      <div class="w-full lg:w-7/12 flex justify-center items-center order-1 lg:order-1">
+        <div class="glint flex justify-center items-center w-full">
+          <img alt="RifDev Platform Mockup" class="w-full max-w-full h-auto object-contain transition-transform duration-700 hover:scale-105" src="img/hero-mockup.png"/>
+        </div>
+      </div>
+
+      <!-- TEXT (Right) -->
+      <div class="w-full lg:w-5/12 flex flex-col items-center lg:items-start text-center lg:text-left z-10 order-2 lg:order-2 justify-center mt-4 lg:mt-12 reveal-up">
+        <h1 class="font-display-lg text-display-lg-mobile lg:text-[42px] text-on-tertiary-fixed-variant tracking-tight font-bold leading-none lg:leading-[1.1] mb-6">
+          Solusi Website Profesional untuk <br class="hidden lg:block"/>
+          Kembangkan Bisnis Anda
+        </h1>
+        <p class="font-body-lg text-base lg:text-[15px] text-on-surface-variant max-w-lg leading-relaxed mb-8">
+          RifDev membantu bisnis dan UMKM di <strong class="text-on-surface font-semibold">seluruh Indonesia</strong> memiliki website modern yang super cepat dan siap pakai. Terima beres tanpa pusing teknis.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#layanan" class="bg-tertiary text-white px-8 py-4 lg:px-6 lg:py-3 rounded-full text-base lg:text-sm font-semibold hover:scale-105 transition-all duration-300 shadow-[0_8px_20px_rgba(0,99,152,0.3)] flex items-center gap-2 w-fit justify-center">
+            <span class="material-symbols-outlined text-[20px]">visibility</span>
+            Lihat Paket Layanan
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Website Section -->
+  <section id="solusi" class="py-section-gap bg-white relative bg-gradient-to-b from-white to-surface-container-low">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop group">
+      <div class="text-center mb-16 reveal-up">
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-tertiary-fixed-variant mb-4">Mengapa Usaha Anda Butuh Website?</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Investasi digital terbaik untuk pertumbuhan jangka panjang bisnis Anda, di mana pun Anda berada.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div class="glass-overlay p-10 rounded-2xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] flex flex-col items-start gap-6 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl reveal-up">
+          <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-[#64B5F6]"><span class="material-symbols-outlined text-3xl">verified</span></div>
+          <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Terlihat Profesional</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Meningkatkan kepercayaan pelanggan dengan kehadiran online yang resmi dan meyakinkan.</p>
+        </div>
+        <div class="glass-overlay p-10 rounded-2xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] flex flex-col items-start gap-6 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl reveal-up">
+          <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-[#64B5F6]"><span class="material-symbols-outlined text-3xl">schedule</span></div>
+          <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Buka 24 Jam</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Pelanggan dapat mengakses informasi produk atau layanan Anda kapan saja, dari mana saja.</p>
+        </div>
+        <div class="glass-overlay p-10 rounded-2xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] flex flex-col items-start gap-6 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl reveal-up">
+          <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-[#64B5F6]"><span class="material-symbols-outlined text-3xl">language</span></div>
+          <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Ditemukan di Google</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Calon pelanggan bisa menemukan usaha Anda lewat pencarian Google tanpa perlu iklan mahal.</p>
+        </div>
+      </div>
+      
+      <!-- Myth Busters -->
+      <div class="text-center mb-12 reveal-up">
+        <span class="bg-orange-50 text-orange-600 px-4 py-1 rounded-full font-label-sm text-label-sm inline-block">Jangan Percaya Mitos Ini!</span>
+        <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-tertiary-fixed-variant mt-4">Mitos vs Fakta tentang Website</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface-container-low rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 reveal-up">
+          <div class="flex items-start gap-3 mb-4"><p class="font-body-md text-on-surface-variant line-through opacity-70 italic">"Website itu mahal"</p></div>
+          <div class="flex items-start gap-3"><p class="font-body-md text-on-surface font-medium">Lebih murah dari sewa toko fisik! Investasi sekali, manfaat jangka panjang.</p></div>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 reveal-up">
+          <div class="flex items-start gap-3 mb-4"><p class="font-body-md text-on-surface-variant line-through opacity-70 italic">"Ribet & harus paham IT"</p></div>
+          <div class="flex items-start gap-3"><p class="font-body-md text-on-surface font-medium">Anda tinggal cerita, kami yang kerjakan semuanya dari A sampai Z.</p></div>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 reveal-up">
+          <div class="flex items-start gap-3 mb-4"><p class="font-body-md text-on-surface-variant line-through opacity-70 italic">"Bisnis kecil belum butuh"</p></div>
+          <div class="flex items-start gap-3"><p class="font-body-md text-on-surface font-medium">Justru website bantu usaha kecil bersaing setara dengan yang besar.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="layanan" class="py-section-gap bg-surface-container-low">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="text-center mb-16 reveal-up">
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-tertiary-fixed-variant mb-4">Pilih Paket Sesuai Kebutuhan</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Tidak ada harga pasti di sini, kami sesuaikan dengan budget dan kebutuhan Anda. Konsultasi dulu, gratis!</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 lg:py-8">
+        
+        <!-- Paket 1: Landing Page -->
+        <div class="relative bg-white rounded-3xl p-8 lg:p-10 flex flex-col gap-5 hover:-translate-y-2 transition-all duration-300 border border-outline-variant/30 shadow-lg group reveal-up">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-primary-container/50 text-[#64B5F6] group-hover:bg-[#64B5F6] group-hover:text-white transition-colors duration-300">
+            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2">Landing Page</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant min-h-[4rem]">Website satu halaman fokus dan menarik untuk promosikan produk atau jasa spesifik Anda.</p>
+          </div>
+          <div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low rounded-lg px-4 py-2 w-fit mb-2">
+            <span class="material-symbols-outlined text-sm">schedule</span>3–7 hari kerja
+          </div>
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Desain modern & eye-catching</span>
+            </li>
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Mobile-friendly</span>
+            </li>
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Integrasi WhatsApp</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6289507083879?text=Halo%20RifDev%2C%20saya%20ingin%20konsultasi%20tentang%20paket%20pembuatan%20Landing%20Page." target="_blank" class="mt-6 w-full py-3.5 rounded-xl text-center font-semibold text-tertiary bg-tertiary/10 hover:bg-tertiary hover:text-white transition-colors duration-300">Konsultasi Paket</a>
+        </div>
+
+        <!-- Paket 2: Company Profile -->
+        <div class="relative bg-white rounded-3xl p-8 lg:p-10 flex flex-col gap-5 hover:-translate-y-2 transition-all duration-300 border-2 border-tertiary shadow-[0_8px_32px_rgba(0,99,152,0.15)] group md:scale-105 z-10 my-4 md:my-0 reveal-up reveal-delay-100">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-tertiary to-[#004b74] text-white px-6 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap shadow-lg flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">star</span> Paling Populer
+          </div>
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-tertiary/10 text-tertiary group-hover:bg-tertiary group-hover:text-white transition-colors duration-300">
+            <span class="material-symbols-outlined text-3xl">business</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2">Company Profile</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant min-h-[4rem]">Website multi-halaman untuk tampilkan profil bisnis secara profesional. Cocok tingkatkan kepercayaan.</p>
+          </div>
+          <div class="flex items-center gap-2 text-tertiary font-label-sm text-label-sm bg-tertiary/10 rounded-lg px-4 py-2 w-fit mb-2">
+            <span class="material-symbols-outlined text-sm">schedule</span>7–14 hari kerja
+          </div>
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Halaman Home, About, Layanan, dll</span>
+            </li>
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>SEO optimized</span>
+            </li>
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Admin panel</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6289507083879?text=Halo%20RifDev%2C%20saya%20ingin%20memesan%20paket%20pembuatan%20Company%20Profile." target="_blank" class="mt-6 w-full py-3.5 rounded-xl text-center font-semibold text-white bg-tertiary hover:bg-[#004b74] shadow-md hover:shadow-lg transition-all duration-300">Pesan Sekarang</a>
+        </div>
+
+        <!-- Paket 3: Toko Online -->
+        <div class="relative bg-white rounded-3xl p-8 lg:p-10 flex flex-col gap-5 hover:-translate-y-2 transition-all duration-300 border border-outline-variant/30 shadow-lg group reveal-up">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-primary-container/50 text-[#64B5F6] group-hover:bg-[#64B5F6] group-hover:text-white transition-colors duration-300">
+            <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2">Toko Online</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant min-h-[4rem]">Website e-commerce lengkap untuk jualan produk secara online. Pelanggan bisa pesan langsung.</p>
+          </div>
+          <div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low rounded-lg px-4 py-2 w-fit mb-2">
+            <span class="material-symbols-outlined text-sm">schedule</span>14–30 hari kerja
+          </div>
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Katalog produk</span>
+            </li>
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Keranjang & checkout</span>
+            </li>
+            <li class="flex items-start gap-3 font-body-md text-body-md text-on-surface-variant">
+              <span class="material-symbols-outlined text-tertiary text-xl shrink-0 mt-0.5">check_circle</span>
+              <span>Notifikasi WA</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/6289507083879?text=Halo%20RifDev%2C%20saya%20ingin%20konsultasi%20tentang%20paket%20pembuatan%20Toko%20Online." target="_blank" class="mt-6 w-full py-3.5 rounded-xl text-center font-semibold text-tertiary bg-tertiary/10 hover:bg-tertiary hover:text-white transition-colors duration-300">Konsultasi Paket</a>
+        </div>
+
+      </div>
+      
+      <div class="mt-10 md:mt-16 text-center px-4">
+        <p class="inline-flex flex-col md:flex-row items-center justify-center gap-2 text-on-surface-variant font-medium bg-white px-6 py-4 rounded-2xl md:rounded-full shadow-sm border border-outline-variant/20 text-sm">
+          <span class="material-symbols-outlined text-tertiary text-xl">info</span>
+          <span>Spesifikasi dan harga final akan disesuaikan dengan kebutuhan (brief) dan tingkat kerumitan website Anda.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="proses" class="py-section-gap bg-surface-container-low">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="text-center mb-16 reveal-up">
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-tertiary-fixed-variant mb-4">Cuma 4 Langkah, Website Anda Jadi</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Tidak perlu pusing mikirin coding atau hal teknis. Anda terima beres.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div class="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] border-t-2 border-dashed border-tertiary/30" aria-hidden="true"></div>
+        
+        <div class="flex flex-col items-center text-center gap-5 group reveal-up">
+          <div class="w-20 h-20 rounded-full bg-white border-2 border-tertiary/20 flex items-center justify-center text-tertiary z-10 relative group-hover:border-tertiary group-hover:bg-tertiary group-hover:text-white transition-all duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">chat</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">1. Tanya-tanya Dulu</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Hubungi kami lewat WhatsApp. Ceritakan usaha Anda, santai saja, gratis kok!</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-5 group reveal-up">
+          <div class="w-20 h-20 rounded-full bg-white border-2 border-tertiary/20 flex items-center justify-center text-tertiary z-10 relative group-hover:border-tertiary group-hover:bg-tertiary group-hover:text-white transition-all duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">design_services</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">2. Kami Buatkan Desain</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Kami akan siapkan tampilan website yang paling pas dan menarik untuk jualan Anda.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-5 group reveal-up">
+          <div class="w-20 h-20 rounded-full bg-white border-2 border-tertiary/20 flex items-center justify-center text-tertiary z-10 relative group-hover:border-tertiary group-hover:bg-tertiary group-hover:text-white transition-all duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">laptop_mac</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">3. Proses Pembuatan</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Anda tinggal duduk manis. Tim kami yang akan merakit websitenya dari awal sampai selesai.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-5 group reveal-up">
+          <div class="w-20 h-20 rounded-full bg-white border-2 border-tertiary/20 flex items-center justify-center text-tertiary z-10 relative group-hover:border-tertiary group-hover:bg-tertiary group-hover:text-white transition-all duration-300 shadow-sm">
+            <span class="material-symbols-outlined text-3xl">celebration</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2">4. Website Siap Dipakai!</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Selesai! Website Anda sudah bisa dibuka di HP & Laptop, siap cari pelanggan baru di internet.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portofolio" class="py-section-gap bg-surface">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="text-center mb-16 reveal-up">
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-tertiary-fixed-variant mb-4">Portofolio Kami</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Beberapa karya terbaik yang telah kami kerjakan untuk berbagai klien.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="overflow-hidden rounded-3xl shadow-sm border border-outline-variant/20 cursor-pointer reveal-up">
+          <img alt="Portofolio 1" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" src="img/portofolio-1.jpg"/>
+        </div>
+        <div class="overflow-hidden rounded-3xl shadow-sm border border-outline-variant/20 cursor-pointer reveal-up">
+          <img alt="Portofolio 2" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" src="img/portofolio-2.jpg"/>
+        </div>
+        <div class="overflow-hidden rounded-3xl shadow-sm border border-outline-variant/20 cursor-pointer reveal-up">
+          <img alt="Portofolio 3" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" src="img/portofolio-3.jpg"/>
+        </div>
+        <div class="overflow-hidden rounded-3xl shadow-sm border border-outline-variant/20 cursor-pointer reveal-up">
+          <img alt="Portofolio 4" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" src="img/portofolio-4.jpg"/>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <footer class="w-full pt-16 pb-8 bg-surface border-t border-outline-variant/30">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+        <a href="#hero" class="flex items-center group -space-x-2 md:-space-x-3">
+          <img src="img/logo.png" alt="RifDev Logo" class="h-8 md:h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
+          <span class="font-display-lg text-headline-md tracking-tighter text-primary font-bold">RifDev</span>
+        </a>
+
+        <div class="flex items-center gap-6">
+          <a href="https://www.instagram.com/rifdev_/" target="_blank" class="text-on-surface-variant hover:text-tertiary transition-colors duration-300" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://shopee.co.id/ijoro?categoryId=100644&entryPoint=ShopByPDP&itemId=43431643731&upstream=search" target="_blank" class="text-on-surface-variant hover:text-[#EE4D2D] transition-colors duration-300" aria-label="Shopee">
+            <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+          </a>
+          <a href="https://tk.tokopedia.com/ZSCXs9C84/" target="_blank" class="text-on-surface-variant hover:text-[#00AA5B] transition-colors duration-300" aria-label="Tokopedia">
+            <span class="material-symbols-outlined text-2xl">storefront</span>
+          </a>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-outline-variant/30 text-center">
+        <p class="font-body-md text-sm text-secondary">© 2026 RifDev. Indramayu, Jawa Barat.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/6289507083879?text=Halo%20RifDev,%20saya%20tertarik%20untuk%20membuat%20website%20untuk%20usaha%20saya.%20Bisa%20konsultasi%20gratis?" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-all duration-300" aria-label="Chat via WhatsApp" style="box-shadow: 0 4px 20px rgba(37,211,102,0.5)">
+    <span class="material-symbols-outlined text-3xl">chat</span>
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
+
